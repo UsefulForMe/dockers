@@ -1,0 +1,16 @@
+version: "3.5"
+services:
+  mysql-global:
+    image: mysql:latest
+    container_name: mysql-global
+    ports:
+      - "3306:3306"
+    volumes:
+     - mysql-data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: "root"
+    
+    restart: unless-stopped
+
+volumes:
+  mysql-global:

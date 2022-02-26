@@ -1,0 +1,13 @@
+version: "3.5"
+services:
+  mongo-global:
+    image: mongo:latest
+    container_name: mongo-global
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-global:/data/db
+    restart: always
+
+volumes:
+  mongo-global:
